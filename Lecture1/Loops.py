@@ -43,3 +43,25 @@ for i in range(1, 11):
     if i == 5:
         break
     print(i)
+    
+    
+    
+    
+    
+    
+# While Loop
+# While loop is used to execute a block of code repeatedly as long as the condition is true
+# While loop is used when the number of iterations is not known
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+# Example
+# Print the sum of first n natural numbers
+n = int(input("Enter a number: "))
+sum = 0
+i = 1
+while i <= n:
+    sum += i
+    i += 1
+print("Sum:", sum)

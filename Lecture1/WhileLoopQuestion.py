@@ -30,17 +30,31 @@ while True:
 # 1. Separate each digit of a number and print it on a new line
 num = int(input("Enter a number to separate its digits: "))
 print("Digits separated:")
-for digit in str(num):
+while num > 0:
+    digit = num % 10
     print(digit)
+    num = num // 10 
 
 # 2. Accept a number and print its reverse
 num2 = int(input("Enter a number to reverse: "))
-reverse_num2 = int(str(num2)[::-1])
+reverse_num2 = 0
+while num2 > 0:
+    digit = num2 % 10
+    reverse_num2 = reverse_num2 * 10 + digit
+    num2 = num2 // 10
 print(f"Reversed number: {reverse_num2}")
 
 # 3. Accept a number and check if it is a palindromic number
 num3 = int(input("Enter a number to check if it's palindromic: "))
-if str(num3) == str(num3)[::-1]:
-    print(f"{num3} is a palindromic number.")
+original_num3 = num3
+reversed_num3 = 0
+temp = num3
+while temp > 0:
+    digit = temp % 10
+    reversed_num3 = reversed_num3 * 10 + digit
+    temp = temp // 10
+
+if original_num3 == reversed_num3:
+    print(f"{original_num3} is a palindromic number.")
 else:
-    print(f"{num3} is not a palindromic number.")
+    print(f"{original_num3} is not a palindromic number.")
